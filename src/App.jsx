@@ -60,8 +60,8 @@ function App() {
               <div className='md:flex justify-between'>
                 <span className='break-words'>{word.eng}</span> : <span className='break-words'>{word.uz}</span>
               </div>
-              <div className='flex mt-2 gap-3 relative'>
-                <button onMouseMove={() => setTooltip(true)} onMouseLeave={() => setTooltip(false)} className='block border p-1 px-2 rounded-lg mx-2' onClick={() => dispatch(changeStatus(word.id))}>{word.completed ? '✔' : "×"}</button>
+              <div className='sm:flex md:flex mt-2 gap-3 relative'>
+                <button onMouseMove={() => setTooltip(true)} onMouseLeave={() => setTooltip(false)} className=' border p-1 px-2 rounded-lg mx-2' onClick={() => dispatch(changeStatus(word.id))}>{word.completed ? '✔' : "×"}</button>
                 {tooltip && <p className='absolute left-[50% top-full border text-blue-600 bg-slate-200 px-3 rounded-lg'>{word.completed ? 'Yodlangan' : 'Yodlanmagan'}</p> }
                 <button className='border p-1 px-2 rounded-lg bg-red-600 text-white' onClick={() => dispatch(deleteWord(word.id))}>×</button>
                 <EditModal current={word} />
