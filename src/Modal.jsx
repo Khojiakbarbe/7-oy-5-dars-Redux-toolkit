@@ -21,9 +21,10 @@ function Modal() {
 
     function submit(e) {
         e.preventDefault();
-        dispatch(post({ id: Date.now(), eng: english, uz: uzbek, level,  completed }))
+        dispatch(post({ id: Date.now(), eng: english, uz: uzbek, level, completed }))
         setEnglish('')
         setUzbek('')
+        setModal(false)
     }
 
     return (
